@@ -6,9 +6,6 @@ dist/
 frontend/node_modules/
 frontend/dist/
 
-# Wails generated files
-frontend/wailsjs/
-
 # Go
 *.exe
 *.exe~
