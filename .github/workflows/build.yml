@@ -24,27 +24,6 @@ jobs:
         with:
           go-version: '1.23'
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-
-      - name: Install Wails
-        run: go install github.com/wailsapp/wails/v2/cmd/wails@latest
-
-      - name: Install frontend dependencies
-        run: |
-          cd frontend
-          npm install
-
-      - name: Generate Wails bindings
-        run: wails generate module
-
-      - name: Build frontend
-        run: |
-          cd frontend
-          npm run build
-
       - name: Run Go fmt check
         run: |
           if [ -n "$(gofmt -l .)" ]; then
