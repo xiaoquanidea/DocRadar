@@ -220,8 +220,8 @@ type FilterOptions struct {
 func containsIgnoreCase(s, substr string) bool {
 	return len(s) >= len(substr) &&
 		(s == substr ||
-		 len(substr) == 0 ||
-		 findIgnoreCase(s, substr) >= 0)
+			len(substr) == 0 ||
+			findIgnoreCase(s, substr) >= 0)
 }
 
 func findIgnoreCase(s, substr string) int {

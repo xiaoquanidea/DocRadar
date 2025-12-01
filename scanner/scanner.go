@@ -11,40 +11,40 @@ import (
 
 // FileInfo 文件信息结构
 type FileInfo struct {
-	Path         string    `json:"path"`
-	Name         string    `json:"name"`
-	Size         int64     `json:"size"`
-	ModTime      time.Time `json:"modTime"`
-	Extension    string    `json:"extension"`
-	FileType     string    `json:"fileType"` // pdf, word, excel, ppt
-	IsValid      bool      `json:"isValid"`
-	InvalidReason string   `json:"invalidReason,omitempty"`
+	Path          string    `json:"path"`
+	Name          string    `json:"name"`
+	Size          int64     `json:"size"`
+	ModTime       time.Time `json:"modTime"`
+	Extension     string    `json:"extension"`
+	FileType      string    `json:"fileType"` // pdf, word, excel, ppt
+	IsValid       bool      `json:"isValid"`
+	InvalidReason string    `json:"invalidReason,omitempty"`
 }
 
 // ScanOptions 扫描选项
 type ScanOptions struct {
-	RootPath       string   `json:"rootPath"`
-	IncludeTypes   []string `json:"includeTypes"` // pdf, word, excel, ppt
-	ExcludePaths   []string `json:"excludePaths"` // 排除的路径
-	ValidateFiles  bool     `json:"validateFiles"` // 是否验证文件有效性
+	RootPath      string   `json:"rootPath"`
+	IncludeTypes  []string `json:"includeTypes"`  // pdf, word, excel, ppt
+	ExcludePaths  []string `json:"excludePaths"`  // 排除的路径
+	ValidateFiles bool     `json:"validateFiles"` // 是否验证文件有效性
 }
 
 // ScanResult 扫描结果
 type ScanResult struct {
-	Files       []FileInfo `json:"files"`
-	TotalCount  int        `json:"totalCount"`
-	ValidCount  int        `json:"validCount"`
-	InvalidCount int       `json:"invalidCount"`
-	ScanTime    float64    `json:"scanTime"` // 扫描耗时（秒）
+	Files        []FileInfo `json:"files"`
+	TotalCount   int        `json:"totalCount"`
+	ValidCount   int        `json:"validCount"`
+	InvalidCount int        `json:"invalidCount"`
+	ScanTime     float64    `json:"scanTime"` // 扫描耗时（秒）
 }
 
 // ScanProgress 扫描进度
 type ScanProgress struct {
-	CurrentPath   string `json:"currentPath"`   // 当前扫描的路径
-	ScannedDirs   int    `json:"scannedDirs"`   // 已扫描的目录数
-	FoundFiles    int    `json:"foundFiles"`    // 已找到的文件数
-	CurrentFile   string `json:"currentFile"`   // 当前处理的文件
-	IsScanning    bool   `json:"isScanning"`    // 是否正在扫描
+	CurrentPath string `json:"currentPath"` // 当前扫描的路径
+	ScannedDirs int    `json:"scannedDirs"` // 已扫描的目录数
+	FoundFiles  int    `json:"foundFiles"`  // 已找到的文件数
+	CurrentFile string `json:"currentFile"` // 当前处理的文件
+	IsScanning  bool   `json:"isScanning"`  // 是否正在扫描
 }
 
 // ProgressCallback 进度回调函数类型
@@ -326,7 +326,7 @@ func (s *Scanner) Scan(options ScanOptions) (*ScanResult, error) {
 // GetDrives 获取系统所有驱动器（Windows）或根目录（macOS/Linux）
 func GetDrives() []string {
 	var drives []string
-	
+
 	// macOS/Linux
 	if _, err := os.Stat("/"); err == nil {
 		// 获取用户主目录
@@ -336,7 +336,7 @@ func GetDrives() []string {
 		}
 		drives = append(drives, "/")
 	}
-	
+
 	// Windows - 检查常见驱动器盘符
 	for _, drive := range "CDEFGHIJKLMNOPQRSTUVWXYZ" {
 		drivePath := string(drive) + ":\\"
@@ -344,7 +344,6 @@ func GetDrives() []string {
 			drives = append(drives, drivePath)
 		}
 	}
-	
+
 	return drives
 }
-
