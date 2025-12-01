@@ -1,0 +1,41 @@
+# Build outputs
+build/bin/
+dist/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Wails generated files
+frontend/wailsjs/
+
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+go.work
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Debug files
+*.log
+office-finder-debug.log
