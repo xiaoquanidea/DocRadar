@@ -1,4 +1,4 @@
-module office-finder
+module doc-radar
 
 go 1.23
 

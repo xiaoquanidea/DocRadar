@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	"office-finder/scanner"
+	"doc-radar/scanner"
 	"os"
 	"os/exec"
 	"path/filepath"

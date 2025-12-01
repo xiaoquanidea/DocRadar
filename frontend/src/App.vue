@@ -4,7 +4,7 @@
     <el-header class="header">
       <h1 class="title">
         <el-icon><Document /></el-icon>
-        Office文件查找器
+        DocRadar - 文档雷达
       </h1>
     </el-header>
 

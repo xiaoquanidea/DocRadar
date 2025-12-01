@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# Office Finder 打包脚本
+# DocRadar 打包脚本
 # 用法: ./build.sh [选项]
 # 选项:
 #   all      - 构建所有平台 (默认)
 #   mac      - 仅构建 macOS
-#   win      - 仅构建 wes
+#   win      - 仅构建 Windows
 #   clean    - 清理构建目录
 
 set -e
@@ -18,7 +18,7 @@ BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
 # 项目信息
-APP_NAME="office-finder"
+APP_NAME="doc-radar"
 VERSION="1.0.0"
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 BUILD_DIR="${SCRIPT_DIR}/build/bin"
@@ -154,7 +154,7 @@ build_all() {
 
 # 显示帮助
 show_help() {
-    echo "Office Finder 打包脚本"
+    echo "DocRadar 打包脚本"
     echo ""
     echo "用法: $0 [选项]"
     echo ""
