@@ -2,12 +2,12 @@
 
 快速扫描和管理 Office 文档的桌面应用，帮助你找到散落在各处的 PDF、Word、Excel、PPT 文件。
 
-[![Release](https://img.shields.io/github/v/release/xiaoquanidea/doc-radar)](https://github.com/xiaoquanidea/doc-radar/releases)
+[![Release](https://img.shields.io/github/v/release/xiaoquanidea/DocRadar)](https://github.com/xiaoquanidea/DocRadar/releases)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Windows-lightgrey.svg)](#-快速开始)
 [![Go](https://img.shields.io/badge/Go-1.23-00ADD8.svg)](https://go.dev/)
 [![Vue](https://img.shields.io/badge/Vue-3-4FC08D.svg)](https://vuejs.org/)
-[![Build](https://github.com/xiaoquanidea/doc-radar/actions/workflows/build.yml/badge.svg)](https://github.com/xiaoquanidea/doc-radar/actions)
+[![Build](https://github.com/xiaoquanidea/DocRadar/actions/workflows/build.yml/badge.svg)](https://github.com/xiaoquanidea/DocRadar/actions)
 
 ## ✨ 核心功能
 
@@ -27,7 +27,7 @@
 
 ### 📥 下载使用
 
-👉 前往 [Releases](https://github.com/xiaoquanidea/doc-radar/releases) 页面下载最新版本
+👉 前往 [Releases](https://github.com/xiaoquanidea/DocRadar/releases) 页面下载最新版本
 
 #### macOS
 
