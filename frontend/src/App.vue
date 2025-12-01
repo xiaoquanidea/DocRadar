@@ -247,7 +247,7 @@
             :data="pagedFiles"
             :row-key="(row: any) => row.path"
             style="width: 100%"
-            height="450"
+            class="file-table"
             @selection-change="handleSelectionChange"
             v-loading="scanning"
             border
@@ -934,16 +934,40 @@ const formatDate = (dateStr: string) => {
 
 .file-list-card {
   height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.file-list-card :deep(.el-card__header) {
+  flex-shrink: 0;
 }
 
 .file-list-card :deep(.el-card__body) {
   padding: 12px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.file-table {
+  flex: 1;
+  min-height: 0;
+}
+
+.empty-state {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .pagination-container {
   margin-top: 16px;
   display: flex;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 :deep(.el-checkbox-group) {
